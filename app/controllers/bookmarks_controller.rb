@@ -27,9 +27,10 @@ class BookmarksController < ApplicationController
     respond_to do |format|
       if @bookmark.save
         format.html { redirect_to @bookmark, notice: "Bookmark was successfully created." }
+        format.js {}
         format.json { render :show, status: :created, location: @bookmark }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.htm { render :new, status: :unprocessable_entity }
         format.json { render json: @bookmark.errors, status: :unprocessable_entity }
       end
     end
@@ -65,6 +66,6 @@ class BookmarksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def bookmark_params
-      params.require(:bookmark).permit(:name, :url)
+      params.require(:bookmark).permit(:name, :url, :category_id, :kind_id)
     end
 end

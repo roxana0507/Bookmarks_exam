@@ -11,3 +11,18 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+require("chartkick/chart.js")
+
+
+//= require jquery3
+//= require popper
+//= require bootstrap
+//= require rails-ujs
+//= require chartkick
+//= require highcharts
+//= require activestorage
+//= require jquery/dist/jquery
+//= require turbolinks
+//= require_tree .

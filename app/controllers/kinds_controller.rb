@@ -4,6 +4,7 @@ class KindsController < ApplicationController
   # GET /kinds or /kinds.json
   def index
     @kinds = Kind.all
+    @torta = Bookmark.joins(:kind).group("kinds.name").count
   end
 
   # GET /kinds/1 or /kinds/1.json

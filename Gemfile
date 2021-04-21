@@ -25,10 +25,19 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
- gem 'faker', '~> 2.17.0'
+gem 'faker', '~> 2.17.0'
+gem 'chartkick', '~> 4.0'
+gem 'groupdate', '~> 5.2'
+gem 'chart-js-rails'
+gem 'bootstrap'
+
+
+gem 'rails-erd', group: :development
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

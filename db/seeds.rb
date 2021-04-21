@@ -7,7 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-#Kind.destroy_all()
+Bookmark.destroy_all
+Kind.destroy_all
+Category.destroy_all
 
 Kind.create([
     {
@@ -70,8 +72,17 @@ Category.create([
     }
 ])
 
-# Bookmark.create ([
-#     {
-#         {name: "Course civil law",url: "https://www.youtube.com/watch?v=Ma0KmHILhzg", category: Category.find_by({name: ""}), type: Type.find_by({name: "Meme"})},
-#     }
-# ])
+
+
+20.times do
+    Bookmark.create(
+        name: Faker::Commerce.department,
+        url: Faker::Internet.url,
+        kind_id: rand(1..15),
+        category_id: rand(1..20)
+    )
+end
+
+
+
+
